@@ -1,24 +1,22 @@
-# README
+# Sample currency conversion transaction log
+## Add User
+jamie = User.create(first_name:'Jamie',last_name:'Ross')
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Add Account
+jamie_account = Account.create(user_id:jamie.id)
 
-Things you may want to cover:
+## Add currencies
+usd_currency = Currency.create(name:'USD')
+bc_currency = Currency.create(name:'BitCoin')
 
-* Ruby version
+## Add Currency Accounts
+jamie_usd_account = CurrencyAccount.create(account_id:jamie_account.id,currency_id:usd_currency.id)
 
-* System dependencies
+jamie_bc_account = CurrencyAccount.create(account_id:jamie_account.id,currency_id:bc_currency.id)
 
-* Configuration
+## Add a balance
+jamie_usd_account.balance = 100
+jamie_usd_account.save
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Transaction
+See Transaction Controller
