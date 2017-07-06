@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170706025217) do
+ActiveRecord::Schema.define(version: 20170706031754) do
 
   create_table "accounts", force: :cascade do |t|
     t.integer "user_id"
@@ -33,9 +33,9 @@ ActiveRecord::Schema.define(version: 20170706025217) do
   end
 
   create_table "transactions", force: :cascade do |t|
-    t.string "origin_currency_account"
+    t.integer "origin_currency_account"
     t.string "origin_currency_amount"
-    t.string "destination_currency_account"
+    t.integer "destination_currency_account"
     t.string "destination_currency_amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
