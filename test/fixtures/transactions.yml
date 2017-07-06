@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  origin_currency_account: MyString
+  origin_currency_amount: MyString
+  destination_currency_account: MyString
+  destination_currency_amount: MyString
+
+two:
+  origin_currency_account: MyString
+  origin_currency_amount: MyString
+  destination_currency_account: MyString
+  destination_currency_amount: MyString
